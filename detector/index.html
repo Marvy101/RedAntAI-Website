@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-CKEN9K05TK"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-CKEN9K05TK');
+</script>
+  <title>RedAntAI's AI-generated text detector</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Check the originality of your text with our AI-generated text detector. Upload your Word or txt file or enter your text to get started.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico" />
+  <script src="https://unpkg.com/docx@7.1.2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.7.1/jszip.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="input-area">
+      <h2>Input</h2>
+      <form onsubmit="sendToAPI(); return false;">
+        <textarea rows="10" cols="100" type="text" id="input" name="input" placeholder="Enter some text here..."></textarea>
+        <label for="fileInput">Upload a Word or txt file:</label>
+        <input type="file" id="fileInput" name="fileInput" accept=".txt,.docx" onchange="handleFileUpload()" />
+        <br>
+        <button type="submit">Check Plagiarism</button>
+      </form>
+      <div id="loader" class="loader"></div>
+    </div>
+    <div class="result-area">
+        <h2>Results</h2>
+        <div id="results"></div>
+        <div class="result-info-container">
+          <div class="result-info">
+            <p>Texts with a score of more than 76 are typically AI-generated texts</p>
+            <p>Texts with a score of less than 74 are typically Human texts</p>
+            <p>Texts with a score between 74 and 76 are more shady and should be treated with care</p>
+            <p>Our detector is more reliable for texts of more than 250 words. Can only take texts of about 4000 characters at a time or ~600 words.</p>
+            <p>If you discover any false positives, please report them <a href="https://docs.google.com/forms/d/e/1FAIpQLSebKF556gEJEVc7zHnEXku9PZ62T_YaFptJ71Z-tunaV5GoSA/viewform" target="_blank">here</a></p>
+            <p>You can subscribe to our <a href="https://redantai.substack.com/" target="_blank">substack</a> to receive all updates or talk with us.</p>
+            <p>We do not advise that this tool should solely be used to penalize a student for cheating.</p>
+          </div>
+        </div>
+      </div>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
