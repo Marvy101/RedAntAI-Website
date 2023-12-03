@@ -1,0 +1,117 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: space-between;
+    padding: 50px;
+    max-width: 1200px;
+    margin: 50px auto;
+  }
+  
+  .input-area,
+  .result-area {
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: relative;
+  }
+  
+  .input-area {
+    flex: 65;
+    margin-right: 30px;
+  }
+  
+  .result-area {
+    flex: 25;
+  }
+  
+  textarea {
+    width: calc(100% - 20px); /* Adjusted width */
+    height: 400px;
+    resize: none;
+    border: 1px solid #ccc;
+    padding: 10px;
+    font-size: 14px;
+    border-radius: 5px;
+    box-sizing: border-box; /* Added this property */
+  }
+  
+  h2 {
+    margin-top: 0;
+    font-size: 24px;
+    color: #4a4a4a;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    background-color: #f44336; /* Changed color to red */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: absolute;
+    bottom: 170px;
+    left: 80%; /* Centered the button horizontally */
+    transform: translateX(-50%); /* Centered the button horizontally */
+  }
+  
+  button:hover {
+    background-color: #d32f2f; /* Darker red on hover */
+  }
+  
+  #results {
+    font-size: 16px;
+    color: #4a4a4a;
+    line-height: 1.6;
+    min-height: 20px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  .result-info-container {
+    border: 1px solid #ccc;
+    padding: 20px;
+    margin-top: 20px;
+  }
+  
+  .result-info {
+    
+    font-size: 14px;
+    line-height: 1.5;
+  }
+  .loader {
+    display: none;
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #f44336;
+    border-radius: 50%;
+    width: 20px;
+    height: 20px;
+    animation: spin 2s linear infinite;
+    position: absolute;
+    bottom: 20px;
+    left: 60%;
+    transform: translateX(-50%);
+  }
+  
+  
+  
+  @keyframes spin {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+  }
+  
+  input[type="file"] {
+    display: inline-block;
+    margin-top: 10px;
+  }
+  
