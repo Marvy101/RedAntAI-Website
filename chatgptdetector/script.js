@@ -62,7 +62,7 @@ document.addEventListener('DOMContentLoaded', function() {
       document.getElementById("loader").style.display = "block";
       document.getElementById("results").innerHTML = "Loading...";
     
-      fetch(`https://marvy101.pythonanywhere.com/user/?user=${encodeURIComponent(inputText)}`)
+      fetch(`https://redantai.pythonanywhere.com/user/?user=${encodeURIComponent(inputText)}`)
         .then(response => response.json())
         .then(data => {
           console.log(data);
